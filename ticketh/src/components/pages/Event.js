@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Button from 'react-bootstrap/Button';
 
 import "./Event.css";
 
@@ -10,17 +11,17 @@ export default function Event() {
         <h1>Events Card</h1>
         <div class="cardcontainer">
           <div class="photo">
-            <img src="https://images.pexels.com/photos/2346006/pexels-photo-2346006.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500" />
-            <div class="photos">Photos</div>
+            <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" />
+            <div class="photos">Dynamic</div>
           </div>
           <div class="content">
-            <p class="txt4">XYZ</p>
-            <p class="txt5">ABCD</p>
+            <p class="txt4">Dimensional Spectrum</p>
+            <p class="txt5">SPCC</p>
           </div>
           <div class="footer">
             <p>
               <a class="waves-effect waves-light btn" href="#">
-                <Link to="/eventbooking">Read More</Link>
+                <Link to="/eventbooking"><Button variant="primary">Read More</Button>{' '}</Link>
               </a>
               <a id="heart">
                 <span class="like">
