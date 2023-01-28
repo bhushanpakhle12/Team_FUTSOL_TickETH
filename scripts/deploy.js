@@ -1,7 +1,7 @@
 
 async function main() {
 
-  const Ticket = await ethers.getContractFactory("Ticket")
+  const Ticket = await ethers.getContractFactory("TickETH")
   const ticket = await Ticket.deploy()
 
   await ticket.deployed()
