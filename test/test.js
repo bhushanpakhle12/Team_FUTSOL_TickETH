@@ -1,20 +1,18 @@
 const { expect } = require("chai")
-const { BigNumber } = require("ethers")
 const { ethers } = require("hardhat")
 
 describe("Ticket", function () {
-  let ticket, deployer
+  let tickETH, deployer
   beforeEach(async () => {
     deployer = await ethers.getSigner()
-    const Ticket = await ethers.getContractFactory("Ticket")
-    ticket = await Ticket.deploy()
+    const TickETH = await ethers.getContractFactory("TickETH")
+    tickETH = await TickETH.deploy()
 
-    await ticket.deployed()
   })
 
-  it("Increases the counter", async () => {
-    const counter = await ticket.mintNFT("0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266", "uri")
-    console.log(counter)
+  it("Ticket minted", async () => {
+    const itemId = await tickETH.mintNFT("0x71bE63f3384f5fb98995898A86B02Fb2426c5788", "http://bafybeiczrkmoa3bt6u5sn7b6doi5fz3yrnlhb36mdrx5lp6wfyf4behb4a.ipfs.localhost:8080/")
+    expect(tickETH).to.emit(tickETH, "NewNFTMinted")
     // expect(counter).to.equal(BigNumber.from(22))
   })
 
