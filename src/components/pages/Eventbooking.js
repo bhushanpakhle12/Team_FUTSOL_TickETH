@@ -6,7 +6,6 @@ import Form from "react-bootstrap/Form";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function BasicExample() {
-
   return (
     <div className="contain">
       <Form>
@@ -50,9 +49,9 @@ export default function BasicExample() {
             <option>5</option>
           </Form.Select>
         </Form.Group>
-        {/* <Form.Group className="mb-3" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
-      </Form.Group> */}
+        <Form.Group className="mb-5" controlId="formBasicText">
+          <Form.Label>Price - Rs.1200</Form.Label>
+        </Form.Group>
         <Button variant="primary" type="submit">
           Send Your Booking
         </Button>
