@@ -23,6 +23,20 @@ mongoose
     console.log(err);
   });
 
+app.post("/login", (req, res) => {
+  const { email, password } = req.body;
+  console.log(email, password);
+  User.findOne({ email: email }, (err, user) => {
+    if (user) {
+      if (password === user.password) {
+        res.send({ message: "Login Successfull", user });
+      } else {
+        res.send({ message: "Password didn't match" });
+      }
+    }
+  });
+});
+
 app.post("/register", (req, res) => {
   const { email } = req.body;
   User.findOne({ email: email }, (err, user) => {

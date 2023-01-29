@@ -1,34 +1,35 @@
-import React from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import LandingPage from './components/pages/LandingPage'
-import LoginPage from './components/pages/LoginPage'
-import RegisterPage from './components/pages/RegisterPage'
-import ForgetPasswordPage from './components/pages/ForgetPasswordPage'
+import LandingPage from "./components/pages/LandingPage";
+import LoginPage from "./components/pages/LoginPage";
+import RegisterPage from "./components/pages/RegisterPage";
+import ForgetPasswordPage from "./components/pages/ForgetPasswordPage";
 // import HomePage from './components/pages/HomePage'
-import Event from './components/pages/Event'
-import Eventbooking from './components/pages/Eventbooking'
+import Event from "./components/pages/Event";
+import Eventbooking from "./components/pages/Eventbooking";
 
-
-import './App.css'
+import "./App.css";
 
 export default function App() {
-    return (
-        <Router>
-            <div>
-                <Switch>
-                    <Route exact path="/" component={ LandingPage } />
-                    <Route path="/login" component={ LoginPage } />
-                    <Route path="/register" component={ RegisterPage } />
-                    <Route path="/forget-password" component={ ForgetPasswordPage } />
-                    <Route path="/event" component={ Event } />
-                    <Route path="/eventbooking" component={ Eventbooking } />
-                    {/* <Route path="/event" component={ Event } /> */}
-                </Switch>
-                {/* <Footer /> */}
-            </div>
-        </Router>
-    )
+  // useState for redirecting to home only if user exists
+
+  return (
+    <Router>
+      <div>
+        <Switch>
+          <Route exact path="/" component={LandingPage} />
+          <Route path="/login" component={LoginPage} />
+          <Route path="/register" component={RegisterPage} />
+          <Route path="/forget-password" component={ForgetPasswordPage} />
+          <Route path="/event" component={Event} />
+          <Route path="/eventbooking" component={Eventbooking} />
+          {/* <Route path="/event" component={ Event } /> */}
+        </Switch>
+        {/* <Footer /> */}
+      </div>
+    </Router>
+  );
 }
 
 // const Footer = () => {
@@ -38,13 +39,13 @@ export default function App() {
 // }
 
 const FooterStyle = {
-    background: "#222",
-    fontSize: ".8rem",
-    color: "#fff",
-    position: "absolute",
-    bottom: 0,
-    padding: "1rem",
-    margin: 0,
-    width: "100%",
-    opacity: ".5"
-}
+  background: "#222",
+  fontSize: ".8rem",
+  color: "#fff",
+  position: "absolute",
+  bottom: 0,
+  padding: "1rem",
+  margin: 0,
+  width: "100%",
+  opacity: ".5",
+};

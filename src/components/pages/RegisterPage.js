@@ -33,7 +33,8 @@ export default function SignUpPage() {
         .post("http://localhost:5000/register", user) // sending post req and data of user to diff port host at backend (as react is on 3000)
         .then((res) => {
           alert(res.data.message); // res.data is an obj
-          //   navigate("/login"); // after post req redirect to login page
+          // navigate("/login");
+          // navigate("/login"); // after post req redirect to login page
         });
     } else {
       alert("Invalid input");
@@ -62,7 +63,7 @@ export default function SignUpPage() {
             type="password"
             name="password"
             onChange={handleChange}
-            requiredc
+            required
           />
         </p>
         <p>
