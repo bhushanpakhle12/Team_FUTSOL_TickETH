@@ -6,13 +6,9 @@ const eventSchema = new mongoose.Schema({
     required: true,
   },
   email: {
-    type: Number,
+    type: String,
     required: true,
     min: 0,
-  },
-  price: {
-    type: Number,
-    required: true,
   },
   phone: {
     type: String,
@@ -20,6 +16,10 @@ const eventSchema = new mongoose.Schema({
   },
   description: {
     type: String,
+    required: true,
+  },
+  tickets: {
+    type: Number,
     required: true,
   },
 });

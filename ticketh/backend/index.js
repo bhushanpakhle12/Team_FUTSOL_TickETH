@@ -4,6 +4,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 
 const User = require("./models/users");
+const Event = require("./models/events");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -52,6 +53,18 @@ app.post("/register", (req, res) => {
           res.send({ message: "Successfully registered" });
         }
       });
+    }
+  });
+});
+
+app.post("/bookEvents", (req, res) => {
+  const newBooking = new Event(req.body);
+  console.log(newBooking);
+  newBooking.save((err) => {
+    if (err) {
+      res.send(err);
+    } else {
+      res.send({ message: "Successfully registered" });
     }
   });
 });
